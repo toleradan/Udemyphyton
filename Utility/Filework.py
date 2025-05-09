@@ -1,10 +1,12 @@
 # Reading data from the file
 
-obj = open('../../../Documents/Notes/QAENGR.txt', 'w')
-
+obj = open('../../../Documents/Notes/QAENGR.txt', 'a')
+#a = append
+#w = overwrite
+#r = read
 
 #Read all data from the file
-# print(obj.read())
+print(obj.read())
 
 #Read specific line from the file
 print(obj.readline(2,))
@@ -18,4 +20,13 @@ for i in obj.read():
 s = obj.readline()
 while(s):
     print(s)
-    s = obj.readline()
+
+#Write data to text
+obj.write("HELLO WORLD")
+obj.close()
+
+print(obj.tell())
+obj.seek(5)
+print(obj.tell())
+
+
